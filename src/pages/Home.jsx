@@ -5,15 +5,16 @@ import Process from "../components/Process";
 
 import styled from "styled-components";
 import { Element } from "react-scroll";
+import Navbar from "../components/Navbar";
 
 const Section = styled(Element)`
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   justify-content: flex-start;
-  background-color: ${({ bgColor }) => bgColor || "#333"};
+  background-color: ${(props) => props.$bgColor || "#333"};
   color: white;
   font-size: 2rem;
-  border: 1px solid white;
   min-height: ${({ name }) =>
     name === "header"
       ? "auto"
@@ -25,12 +26,14 @@ const Home = (props) => {
 
   return (
     <>
-      <Section name="header" bgColor="#ffffff">
+      <Section name="header" $bgColor="#ffffff">
         <Header />
       </Section>
-      <Section name="process" bgColor="#9399ff">
+      {/* <Section name="prototype" $bgColor="#9399ff"></Section> */}
+      <Section name="process" $bgColor="#23ff9c">
         <Process />
       </Section>
+      <Section name="team" $bgColor="#f86464"></Section>
     </>
   );
 };

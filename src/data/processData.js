@@ -1,13 +1,29 @@
-// processData.js
-const processData = [
-  { id: 1, title: "Process 1", description: "Description of Process 1" },
-  { id: 2, title: "Process 2", description: "Description of Process 2" },
-  { id: 3, title: "Process 3", description: "Description of Process 3" },
-  { id: 4, title: "Process 4", description: "Description of Process 4" },
-  { id: 5, title: "Process 5", description: "Description of Process 5" },
-  { id: 6, title: "Process 6", description: "Description of Process 6" },
-  { id: 7, title: "Process 7", description: "Description of Process 7" },
-  { id: 8, title: "Process 8", description: "Description of Process 8" },
-];
+// src/data/processData.js
+const processData = {
+  "react-app": {
+    id: "react-app",
+    title: "Build a React App",
+    splash: "Learn how to build a React app from scratch.",
+    icon: "🛠️",
+  },
+  "typescript-guide": {
+    id: "typescript-guide",
+    title: "Learn TypeScript",
+    splash: "Get started with TypeScript and understand static typing.",
+    icon: "📘",
+  },
+  "css-grid": {
+    id: "css-grid",
+    title: "Master CSS Grid",
+    splash: "Understand how to build layouts with CSS Grid.",
+    icon: "🔲",
+  },
+  needfinding: {
+    id: "needfinding",
+    title: "Needfinding",
+    splash: "Getting out into the world.",
+    icon: "🔍",
+  },
+};
 
 export default processData;

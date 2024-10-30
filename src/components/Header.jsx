@@ -12,7 +12,7 @@ const HeaderContainer = styled.header`
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 `;
 
 // CITATION: `HeaderText generated using Copilot`
