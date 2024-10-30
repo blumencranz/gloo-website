@@ -106,6 +106,7 @@ const Navbar = () => {
           spy={true}
           duration={1000}
           activeClass="active"
+          offset={-60}
         >
           Home
         </NavItem>
@@ -124,6 +125,7 @@ const Navbar = () => {
           spy={true}
           duration={1000}
           activeClass="active"
+          offset={-60}
         >
           Process
         </NavItem>
@@ -133,6 +135,7 @@ const Navbar = () => {
           spy={true}
           duration={1000}
           activeClass="active"
+          offset={-60}
         >
           Team
         </NavItem>

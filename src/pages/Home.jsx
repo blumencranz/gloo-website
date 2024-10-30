@@ -25,7 +25,7 @@ const Home = (props) => {
   console.log("Rendering Home Component"); // Debugging log
 
   return (
-    <>
+    <div style={{ marginTop: "60px" }}>
       <Section name="header" $bgColor="#ffffff">
         <Header />
       </Section>
@@ -34,7 +34,7 @@ const Home = (props) => {
         <Process />
       </Section>
       <Section name="team" $bgColor="#f86464"></Section>
-    </>
+    </div>
   );
 };
 
