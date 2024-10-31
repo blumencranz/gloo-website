@@ -10,25 +10,23 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
+  font-size: 2em;
   color: #333;
   margin-bottom: 20px;
 `;
 
 const StyledIframe = styled.iframe`
-  margin: 10px 0;
   border: none;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 1280px;
-  height: 720px;
 `;
 
-const Needfinding = () => {
+const LowFiPrototype = () => {
   return (
     <Container>
-      <Title>Needfinding!</Title>
+      <Title>LowFiPrototype!</Title>
       <StyledIframe
-        src="https://drive.google.com/file/d/1vGSzx_KheO5sCllmSOReZ0D_ZrVfBwe-/preview"
+        src="https://drive.google.com/file/d/1pYS8Xcm2KmIDvZ2UP8ImGEAVz5XaaVVQ/preview"
         width="1280"
         height="960"
         allow="autoplay"
@@ -37,4 +35,4 @@ const Needfinding = () => {
   );
 };
 
-export default Needfinding;
+export default LowFiPrototype;

@@ -8,27 +8,22 @@ import styled from "styled-components";
 const NavbarContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-evenly; /* Change to space-between */
+  justify-content: space-between;
   height: 60px;
-  background-color: #485aff;
-  padding-left: 30%;
-  padding-right: 30%;
+  background-color: #898dff;
+  padding: 0 20px;
   color: white;
-  position: fixed; /* Change to fixed */
-  top: 0; /* Fix to the top of the screen */
+  position: fixed;
+  top: 0;
   left: 0;
-  width: 100%; /* Ensure it spans the entire width */
-  z-index: 1000; /* Ensure it stays above other content */
-  @media (max-width: 768px) {
-    justify-content: space-between;
-  }
+  width: 100%;
+  z-index: 1000;
 `;
 
 // Logo component
 const Logo = styled.div`
   font-size: 36px;
   font-weight: bold;
-  flex: 1;
 `;
 
 // Hamburger icon, hidden on larger screens
@@ -44,28 +39,22 @@ const Hamburger = styled.div`
 
 // Navigation links container, with animation for mobile
 const NavLinks = styled.div`
-  display: flex; /* Always visible on larger screens */
-  justify-content: center;
+  display: flex;
   gap: 20px;
-  padding: 10px;
-  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  /* transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; */
   opacity: 1;
   max-height: 200px;
-  /* background-color: gray; */
-  padding-left: 200px;
-  padding-right: 200px;
 
   @media (max-width: 768px) {
     position: absolute;
     top: 60px;
     left: 0;
     width: 100%;
-    background-color: #6066ff;
+    background-color: #898dff;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
 
-    /* Transition-based visibility management */
     opacity: ${(props) => (props.$isOpen ? 1 : 0)};
     max-height: ${(props) => (props.$isOpen ? "200px" : "0px")};
     pointer-events: ${(props) => (props.$isOpen ? "auto" : "none")};
@@ -97,7 +86,7 @@ const Navbar = () => {
 
   return (
     <NavbarContainer>
-      <Logo>MyLogo</Logo> {/* Add the Logo component */}
+      <Logo>Gloo</Logo>
       <Hamburger onClick={toggleMenu}>☰</Hamburger>
       <NavLinks $isOpen={isOpen}>
         <NavItem
@@ -110,15 +99,6 @@ const Navbar = () => {
         >
           Home
         </NavItem>
-        {/* <NavItem
-          to="prototype"
-          smooth="easeInOutCubic"
-          spy={true}
-          duration={1000}
-          activeClass="active"
-        >
-          Prototype
-        </NavItem> */}
         <NavItem
           to="process"
           smooth="easeInOutCubic"

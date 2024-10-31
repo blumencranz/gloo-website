@@ -17,6 +17,27 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
   }
 
+  /* Hide Scrollbar */
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  /* For Firefox */
+  body {
+    scrollbar-width: none; /* Hide scrollbar */
+  }
+
+  /* For Internet Explorer, Edge */
+  body {
+    -ms-overflow-style: none; /* Hide scrollbar */
+  }
+
+  /* Apply theme text color to all text elements */
+  h1, h2, h3, h4, h5, h6, p, span, div, li, a {
+    color: ${(props) => props.theme.colors.text};
+  }
+
   /* Anchor Tag Styling */
   a {
     text-decoration: none;

@@ -1,6 +1,30 @@
 // src/components/Popup.jsx
-import React, { useEffect } from "react";
-import styled from "styled-components";
+import React, { useEffect, useState } from "react";
+import styled, { keyframes, css } from "styled-components";
+
+// Keyframe animation for easing in effect
+const easeInFromBottom = keyframes`
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
+
+// Keyframe animation for easing out effect
+const easeOutToBottom = keyframes`
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+`;
 
 // Styled Components
 const Overlay = styled.div`
@@ -26,9 +50,17 @@ const PopupBox = styled.div`
   height: 90%;
   overflow-y: auto;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-
-  /* Font Styling */
   color: #333;
+
+  /* Apply the animation based on the isClosing state */
+  ${({ isClosing, hasOpened }) =>
+    isClosing && hasOpened
+      ? css`
+          animation: ${easeOutToBottom} 0.3s ease-in-out forwards;
+        `
+      : css`
+          animation: ${easeInFromBottom} 0.3s ease-in-out forwards;
+        `}
 
   /* Custom Scrollbar Styling */
   scrollbar-width: thin; /* For Firefox */
@@ -55,32 +87,56 @@ const PopupBox = styled.div`
 `;
 
 const CloseButton = styled.button`
-  position: absolute;
-  top: 10px;
-  right: 10px; /* Changed to right for better placement */
-  font-size: 24px;
+  position: absolute; /* Changed to absolute for positioning within the overlay */
+  top: 105px;
+  right: 175px; /* Ensure the button is in the top right corner */
+  font-size: 36px;
   background: none;
   border: none;
   cursor: pointer;
-  color: #666;
+  color: gray; /* Ensure the button is always visible */
+  z-index: 99999; /* Ensure the button is above other content */
 
   &:hover {
-    color: #000;
+    color: #000; /* Make the button more prominent on hover */
+    background: none;
   }
 `;
 
 const Popup = ({ isOpen, onClose, children }) => {
+  const [isClosing, setIsClosing] = useState(false);
+  const [hasOpened, setHasOpened] = useState(false);
+  const [contentVisible, setContentVisible] = useState(true);
+
+  useEffect(() => {
+    if (isOpen) {
+      setHasOpened(true);
+      setContentVisible(true);
+    } else if (hasOpened) {
+      setContentVisible(false);
+      setIsClosing(true);
+      setTimeout(() => {
+        setIsClosing(false);
+        onClose();
+      }, 300); // Match the duration of the ease-out animation
+    }
+  }, [isOpen, onClose, hasOpened]);
+
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
 
-  if (!isOpen) return null;
+  if (!isOpen && !isClosing) return null;
 
   return (
     <Overlay onClick={onClose}>
-      <PopupBox onClick={(e) => e.stopPropagation()}>
-        <CloseButton onClick={onClose}>&times;</CloseButton>
-        {children}
+      <CloseButton onClick={onClose}>&times;</CloseButton>
+      <PopupBox
+        isClosing={isClosing}
+        hasOpened={hasOpened}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {contentVisible && children}
       </PopupBox>
     </Overlay>
   );
