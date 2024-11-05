@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Link from "@material-ui/core/Link";
 
 const Container = styled.div`
   display: flex;
@@ -30,13 +29,13 @@ const MedFiPrototype = () => {
   return (
     <Container>
       <Title>A6 MedFi Prototype!</Title>
-      <Link
+      <a
         href="https://www.figma.com/proto/fOpsMCTOCVcIZfkPUBPBQ9/Gloo?node-id=126-1627&node-type=canvas&t=EDP5xbU43GWxPGes-0&scaling=scale-down&content-scaling=fixed&page-id=126%3A1626&starting-point-node-id=126%3A1627"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Link to Figma Prototype
-      </Link>
+        <u>Link to Figma Prototype</u>
+      </a>
       <StyledIframe
         src="https://drive.google.com/file/d/1vNN0htBDS7cg40f1lM9bA1Atqapl7emg/preview"
         width="1280"
