@@ -24,7 +24,7 @@ const StyledIframe = styled.iframe`
 const LowFiPrototype = () => {
   return (
     <Container>
-      <Title>LowFiPrototype!</Title>
+      <Title>A5 LowFi Prototype!</Title>
       <StyledIframe
         src="https://drive.google.com/file/d/1pYS8Xcm2KmIDvZ2UP8ImGEAVz5XaaVVQ/preview"
         width="1280"

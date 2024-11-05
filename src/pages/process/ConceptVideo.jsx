@@ -40,11 +40,7 @@ const DownloadLink = styled.a`
 const ConceptVideo = () => {
   return (
     <Container>
-      <Title>Concept Video!</Title>
-      <StyledIframe
-        src="https://drive.google.com/file/d/10Y6gd9Txwm0Hv5C3esRebUWQqNAzE_aX/preview"
-        allow="autoplay"
-      ></StyledIframe>
+      <Title>A4 Concept Video!</Title>
       <StyledIframe
         src="https://www.youtube.com/embed/dpXmXKQ6bqY"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -57,6 +53,10 @@ const ConceptVideo = () => {
       >
         Download Video (Direct)
       </DownloadLink>
+      <StyledIframe
+        src="https://drive.google.com/file/d/10Y6gd9Txwm0Hv5C3esRebUWQqNAzE_aX/preview"
+        allow="autoplay"
+      ></StyledIframe>
     </Container>
   );
 };

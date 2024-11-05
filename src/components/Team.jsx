@@ -67,19 +67,19 @@ const Team = () => {
       <Banner>The Gloo Crew!</Banner>
       <ProfileContainer>
         <ProfileCard>
-          <Image src="/team/justin.jpeg" alt="Justin B." />
+          <Image src="./team/justin.jpeg" alt="Justin B." />
           <Name>Justin B.</Name>
         </ProfileCard>
         <ProfileCard>
-          <Image src="/team/alison.jpeg" alt="Alison R." />
+          <Image src="./team/alison.jpeg" alt="Alison R." />
           <Name>Alison R.</Name>
         </ProfileCard>
         <ProfileCard>
-          <Image src="/team/matthew.jpeg" alt="Matthew M." />
+          <Image src="./team/matthew.jpeg" alt="Matthew M." />
           <Name>Matthew M.</Name>
         </ProfileCard>
         <ProfileCard>
-          <Image src="/team/monica.jpeg" alt="Monica H." />
+          <Image src="./team/monica.jpeg" alt="Monica H." />
           <Name>Monica H.</Name>
         </ProfileCard>
       </ProfileContainer>

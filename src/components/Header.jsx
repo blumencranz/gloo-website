@@ -18,7 +18,7 @@ const HeaderContainer = styled.header`
 
 // CITATION: `ImageContainer generated using Copilot`
 const ImageContainer = styled.div`
-  background-image: url("/header2.png");
+  background-image: url("./header2.png");
   background-size: cover; // Changed from contain to cover
   background-position: center;
   background-repeat: no-repeat;
