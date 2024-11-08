@@ -36,10 +36,23 @@ const MedFiPrototype = () => {
       >
         <u>Link to Figma Prototype</u>
       </a>
+      <a
+        href="https://drive.google.com/file/d/1zewc7rZY_l9Cruz7ZP_GO9JLUxsYNGqE/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <u>Link to README</u>
+      </a>
       <StyledIframe
         src="https://drive.google.com/file/d/1vNN0htBDS7cg40f1lM9bA1Atqapl7emg/preview"
         width="1280"
         height="960"
+        allow="autoplay"
+      ></StyledIframe>
+      <StyledIframe
+        src="https://drive.google.com/file/d/1zewc7rZY_l9Cruz7ZP_GO9JLUxsYNGqE/preview"
+        width="640"
+        height="480"
         allow="autoplay"
       ></StyledIframe>
     </Container>
