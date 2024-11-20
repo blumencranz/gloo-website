@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import styled from "styled-components";
 import "react-tabs/style/react-tabs.css";
-import processData from "/src/data/processData";
+import processData from "../../../data/processData";
 import { theme } from "../../../styles/theme";
 
 const ProcessContainer = styled.div`

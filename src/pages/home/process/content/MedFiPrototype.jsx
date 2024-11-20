@@ -34,6 +34,7 @@ const LinkButton = styled.a`
   text-decoration: none;
   font-size: 20px;
   height: 50px;
+  gap: 10px;
   &:hover {
     background-color: ${theme.colors.button.hoverInverted};
   }

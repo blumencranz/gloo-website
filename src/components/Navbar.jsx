@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import logo from "/src/assets/Logo.png";
+import logo from "../assets/Logo.png";
 import { theme } from "../styles/theme";
 
 // Navbar container with a fixed position

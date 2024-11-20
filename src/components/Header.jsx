@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import headerImage from "/src/assets/duck.png";
+import headerImage from "../assets/duck.png";
 
 // Styled Components
 const HeaderContainer = styled.header`

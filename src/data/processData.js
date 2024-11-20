@@ -1,9 +1,9 @@
 import HeuristicEvaluation from "../pages/home/process/content/HeuristicEvaluation";
-import AdditionalNeedfinding from "/src/pages/home/process/content/AdditionalNeedfinding";
-import ConceptVideo from "/src/pages/home/process/content/ConceptVideo";
-import LowFiPrototype from "/src/pages/home/process/content/LowFiPrototype";
-import MedFiPrototype from "/src/pages/home/process/content/MedFiPrototype";
-import Needfinding from "/src/pages/home/process/content/Needfinding";
+import AdditionalNeedfinding from "../pages/home/process/content/AdditionalNeedfinding";
+import ConceptVideo from "../pages/home/process/content/ConceptVideo";
+import LowFiPrototype from "../pages/home/process/content/LowFiPrototype";
+import MedFiPrototype from "../pages/home/process/content/MedFiPrototype";
+import Needfinding from "../pages/home/process/content/Needfinding";
 
 // src/data/processData.js
 const processData = {
