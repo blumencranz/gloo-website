@@ -1,5 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import justin from "../../../assets/team/justin.jpeg";
+import matthew from "../../../assets/team/matthew.jpeg";
+import alison from "../../../assets/team/alison.jpeg";
+import monica from "../../../assets/team/monica.jpeg";
 
 const TeamContainer = styled.div`
   display: flex;
@@ -67,19 +71,19 @@ const Team = () => {
       <Banner>The Gloo Crew!</Banner>
       <ProfileContainer>
         <ProfileCard>
-          <Image src="./team/justin.jpeg" alt="Justin B." />
+          <Image src={justin} alt="Justin B." />
           <Name>Justin B.</Name>
         </ProfileCard>
         <ProfileCard>
-          <Image src="./team/alison.jpeg" alt="Alison R." />
+          <Image src={alison} alt="Alison R." />
           <Name>Alison R.</Name>
         </ProfileCard>
         <ProfileCard>
-          <Image src="./team/matthew.jpeg" alt="Matthew M." />
+          <Image src={matthew} alt="Matthew M." />
           <Name>Matthew M.</Name>
         </ProfileCard>
         <ProfileCard>
-          <Image src="./team/monica.jpeg" alt="Monica H." />
+          <Image src={monica} alt="Monica H." />
           <Name>Monica H.</Name>
         </ProfileCard>
       </ProfileContainer>

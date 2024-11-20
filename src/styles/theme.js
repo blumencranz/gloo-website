@@ -1,14 +1,23 @@
 // src/theme.js
 export const theme = {
   colors: {
-    primary: "#4CAF50",
-    secondary: "#FF5722",
-    background: "#FFFFFF",
+    primary: "#F4EBE0",
+    secondary: "#f2dcc1",
+    background: "#F4EBE0",
     text: "#333",
+    button: {
+      normal: "#f2dcc1",
+      normalInverted: "#F4EBE0",
+      hover: "#d9c5ad",
+      hoverInverted: "#d6cec3",
+    },
   },
   fonts: {
-    heading: "Arial, sans-serif",
-    body: "'Open Sans', sans-serif",
+    heading: "Itim, sans-serif",
+    body: "Itim, sans-serif",
+  },
+  constants: {
+    navbarHeight: "60px",
   },
   spacing: {
     small: "8px",

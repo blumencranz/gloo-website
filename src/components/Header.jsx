@@ -1,55 +1,68 @@
 import React from "react";
 import styled from "styled-components";
+import headerImage from "/src/assets/duck.png";
 
-// CITATION: `HeaderContainer generated using Copilot`
+// Styled Components
 const HeaderContainer = styled.header`
   width: 100%;
-  max-width: 1500px;
-  height: 35vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  height: 500px; /* Set a specific height for the header */
+  display: flex;
   align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+  gap: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+  z-index: 999;
 
   @media (max-width: 1345px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
+    flex-direction: column;
+    height: auto; /* Adjust height for column layout */
   }
 `;
 
-// CITATION: `ImageContainer generated using Copilot`
 const ImageContainer = styled.div`
-  background-image: url("./header2.png");
-  background-size: cover; // Changed from contain to cover
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100%;
-`;
-
-// CITATION: `TextContainer generated using Copilot`
-const TextContainer = styled.div`
-  display: flex;
+  /* background-color: aliceblue; */
   justify-content: center;
   align-items: center;
-  text-align: center;
-`;
-
-// CITATION: `HeaderText generated using Copilot`
-const HeaderText = styled.h1`
-  color: black;
-  font-size: 4rem;
-  @media (max-width: 768px) {
-    font-size: 2.5rem;
+  display: flex;
+  flex: 2;
+  width: 100%; /* Ensure it takes full width in column layout */
+  @media (max-width: 1345px) {
+    height: 300px; /* Set a fixed height for column layout */
   }
 `;
 
-// CITATION: `Header generated using Copilot`
+const HeaderImage = styled.img`
+  max-height: 500px; /* Ensure the image does not exceed the container height */
+  width: 100%; /* Ensure the image takes full width */
+  object-fit: contain; /* Ensure the image covers the container */
+
+  @media (max-width: 1345px) {
+    max-height: 300px; /* Set a fixed height for column layout */
+  }
+`;
+
+const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 2;
+  /* width: 100%; */
+`;
+
 const Header = () => {
   return (
     <HeaderContainer>
-      <TextContainer>
-        <HeaderText>Hello, Gloo!</HeaderText>
-      </TextContainer>
-      <ImageContainer />
+      <TitleContainer>
+        <h1>Hello, Gloo!</h1>
+        <p>Making student-teacher connections that stick!</p>
+      </TitleContainer>
+      <ImageContainer>
+        <HeaderImage src={headerImage} />
+      </ImageContainer>
     </HeaderContainer>
   );
 };

@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
 
   /* Body Styles */
   body {
-    font-family: ${(props) => props.theme.fonts.body}, sans-serif;
+    font-family: 'Itim', sans-serif; /* Apply Google Font */
     background-color: ${(props) => props.theme.colors.background};
     color: ${(props) => props.theme.colors.text};
     line-height: 1.6;
@@ -31,11 +31,6 @@ const GlobalStyle = createGlobalStyle`
   /* For Internet Explorer, Edge */
   body {
     -ms-overflow-style: none; /* Hide scrollbar */
-  }
-
-  /* Apply theme text color to all text elements */
-  h1, h2, h3, h4, h5, h6, p, span, div, li, a {
-    color: ${(props) => props.theme.colors.text};
   }
 
   /* Anchor Tag Styling */
@@ -67,9 +62,15 @@ const GlobalStyle = createGlobalStyle`
 
   /* Headings */
   h1, h2, h3, h4, h5, h6 {
-    font-family: ${(props) => props.theme.fonts.heading};
+    font-family: 'Itim', sans-serif; /* Apply Google Font */
     margin-bottom: ${(props) => props.theme.spacing.small};
     line-height: 1.2;
+  }
+
+  /* Paragraph Styling */
+  p {
+    font-size: 1.2rem; /* Adjust the font size of <p> elements */
+    margin-bottom: ${(props) => props.theme.spacing.medium};
   }
 
   /* Layout Container */
@@ -92,6 +93,10 @@ const GlobalStyle = createGlobalStyle`
     
     button {
       padding: ${(props) => props.theme.spacing.small};
+    }
+
+    p {
+      font-size: 0.875rem; /* Adjust the font size of <p> elements for smaller screens */
     }
   }
 `;

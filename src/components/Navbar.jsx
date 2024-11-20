@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import logo from "/src/assets/Logo.png";
+import { theme } from "../styles/theme";
 
 // Navbar container with a fixed position
 const NavbarContainer = styled.div`
@@ -10,9 +12,8 @@ const NavbarContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   height: 60px;
-  background-color: #898dff;
+  background-color: #f2dcc1;
   padding: 0 20px;
-  color: white;
   position: fixed;
   top: 0;
   left: 0;
@@ -21,9 +22,8 @@ const NavbarContainer = styled.div`
 `;
 
 // Logo component
-const Logo = styled.div`
-  font-size: 36px;
-  font-weight: bold;
+const Logo = styled.img`
+  height: 90%;
 `;
 
 // Hamburger icon, hidden on larger screens
@@ -50,7 +50,7 @@ const NavLinks = styled.div`
     top: 60px;
     left: 0;
     width: 100%;
-    background-color: #898dff;
+    background-color: ${theme.colors.secondary};
     flex-direction: column;
     align-items: center;
     overflow: hidden;
@@ -64,7 +64,7 @@ const NavLinks = styled.div`
 // Individual nav item with styles for active state
 const NavItem = styled(ScrollLink)`
   text-decoration: none;
-  color: white;
+  color: ${theme.colors.text};
   font-size: 18px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
@@ -79,14 +79,15 @@ const NavItem = styled(ScrollLink)`
   }
 `;
 
+/*====================================================================*/
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
     <NavbarContainer>
-      <Logo>Gloo</Logo>
+      <Logo src={logo} />
       <Hamburger onClick={toggleMenu}>☰</Hamburger>
       <NavLinks $isOpen={isOpen}>
         <NavItem
