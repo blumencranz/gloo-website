@@ -12,21 +12,23 @@ import { theme } from "../../styles/theme";
 const sectionStyles = {
   header: css`
     margin-top: ${theme.constants.navbarHeight};
-    /* background-color: red; */
-    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); // Bigger diffusion and only on the bottom */
-    z-index: 1; // Ensure header is on top
-    /* position: relative; // Required for z-index to work */
+    z-index: 1;
   `,
-  process: css`
-    /* background-color: aqua; */
-    /* min-height: 100vh;
-    display: flex;
-    justify-content: flex-start; */
+  prototype: css`
+    height: 90vh;
+    background-color: ${theme.colors.secondary};
+    padding-bottom: 20px;
+
+    @media (max-width: 600px) {
+      height: 45vh;
+    }
   `,
+  process: css``,
   team: css`
     min-height: 100vh;
     justify-content: center;
     align-items: center;
+    background-color: ${theme.colors.secondary};
   `,
 };
 
@@ -45,9 +47,9 @@ const Home = () => {
       <Section name="header" sectionType="header">
         <Header />
       </Section>
-      {/* <Section name="prototype" sectionType="prototype">
+      <Section name="prototype" sectionType="prototype">
         <Prototype />
-      </Section> */}
+      </Section>
       <Section name="process" sectionType="process">
         <Process />
       </Section>

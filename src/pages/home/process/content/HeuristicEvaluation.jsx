@@ -1,85 +1,58 @@
 import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../../styles/theme";
+import {
+  SplitView,
+  LinkButton,
+  LinkButtons,
+  ButtonLogo,
+  ParentDiv,
+  ChildDiv,
+  Title,
+} from "../../../../styles/StyledComponents";
+import driveLogo from "../../../../assets/driveLogo.png";
+import excelLogo from "../../../../assets/excelLogo.png";
 
-const SplitView = styled.div`
-  display: flex;
-  flex-direction: row;
-  padding-left: 20px;
-  padding-right: 20px;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-`;
-
-const LinkButtons = styled.div`
-  display: flex;
-  flex-direction: row;
-`;
-
-const LinkButton = styled.a`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 5px;
-  padding: 0 20px;
-  border-radius: 25px;
-  background-color: ${theme.colors.button.normalInverted};
-  color: ${theme.colors.text};
-  text-decoration: none;
-  font-size: 20px;
-  height: 50px;
-  &:hover {
-    background-color: ${theme.colors.button.hoverInverted};
-  }
+const title = `
+  Heuristic Evaluation
 `;
 
 const description = `
-  Our first assignment to learn about Design Discovery and the Needfinding Process
+  Our heuristic evaluation
 `;
 
 const HeuristicEvaluation = () => {
   return (
     <SplitView>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          // backgroundColor: "blue",
-          flex: 1,
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            // backgroundColor: "green",
-            flex: 1,
-          }}
-        >
-          <h1 style={{ marginBottom: "20px" }}>{"Concept Video"}</h1>
+      <ParentDiv>
+        <ChildDiv>
+          <Title>{title}</Title>
           <p>{description}</p>
-        </div>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          flex: 2,
-          gap: "10px",
-        }}
-      >
-        <iframe
-          src="https://drive.google.com/file/d/1u4WcSIkKfvLzF3sJz-vQQD5z9gTTfEB2/preview"
-          width="100%"
-          height="480"
-          allow="autoplay"
-          style={{ border: "none" }}
-        ></iframe>
-      </div>
+        </ChildDiv>
+        <LinkButtons>
+          <LinkButton
+            href="https://drive.google.com/file/d/1u4WcSIkKfvLzF3sJz-vQQD5z9gTTfEB2/view?usp=sharing"
+            target="_blank"
+          >
+            <ButtonLogo src={driveLogo} alt="Google Drive Logo" />
+            Sheet
+          </LinkButton>
+          <LinkButton
+            href="https://drive.google.com/uc?export=download&id=1LAwUdg_5H7J2yItQoyvutY5oU0AnhzSd"
+            target="_blank"
+          >
+            <ButtonLogo src={excelLogo} alt="Excel Logo" />
+            XLSX
+          </LinkButton>
+        </LinkButtons>
+      </ParentDiv>
+      <iframe
+        src="https://drive.google.com/file/d/1u4WcSIkKfvLzF3sJz-vQQD5z9gTTfEB2/preview"
+        width="100%"
+        height="480"
+        allow="autoplay"
+        style={{ border: "none" }}
+      ></iframe>
     </SplitView>
   );
 };

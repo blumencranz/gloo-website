@@ -6,24 +6,48 @@ import styled from "styled-components";
 import logo from "../assets/Logo.png";
 import { theme } from "../styles/theme";
 
+const NAVBAR_HEIGHT_NUMBER = 50;
+const NAVBAR_HEIGHT = `${NAVBAR_HEIGHT_NUMBER}px`;
+
 // Navbar container with a fixed position
 const NavbarContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 60px;
+  justify-content: space-between; /* Change to space-between for better layout */
+  height: ${NAVBAR_HEIGHT};
   background-color: #f2dcc1;
   padding: 0 20px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 9999;
 `;
 
 // Logo component
-const Logo = styled.img`
-  height: 90%;
+const Logo = styled(ScrollLink)`
+  height: 100%; /* Ensure the logo takes the full height of the navbar */
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Center the logo vertically */
+  justify-content: center; /* Center the logo horizontally */
+  color: ${theme.colors.text};
+  font-size: 27px; /* Explicitly set the font size */
+  img {
+    height: 90%; /* Ensure the image takes the full height of the logo container */
+    width: auto; /* Maintain the aspect ratio */
+  }
+  h1 {
+    margin: 0; /* Remove default margin */
+    line-height: 1; /* Ensure the text is vertically centered */
+    color: ${theme.colors.text}; /* Ensure the text color is set */
+    font-size: inherit; /* Inherit the font size from the parent */
+
+    &:hover {
+      color: ${theme.colors
+        .text}; /* Ensure the text color does not change on hover */
+    }
+  }
 `;
 
 // Hamburger icon, hidden on larger screens
@@ -40,14 +64,14 @@ const Hamburger = styled.div`
 // Navigation links container, with animation for mobile
 const NavLinks = styled.div`
   display: flex;
+  justify-content: center;
   gap: 20px;
-  /* transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; */
   opacity: 1;
   max-height: 200px;
 
   @media (max-width: 768px) {
     position: absolute;
-    top: 60px;
+    top: ${NAVBAR_HEIGHT};
     left: 0;
     width: 100%;
     background-color: ${theme.colors.secondary};
@@ -75,11 +99,9 @@ const NavItem = styled(ScrollLink)`
   }
 
   &:hover {
-    color: lightgray;
+    color: black;
   }
 `;
-
-/*====================================================================*/
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -87,18 +109,27 @@ const Navbar = () => {
 
   return (
     <NavbarContainer>
-      <Logo src={logo} />
+      <Logo
+        to="header"
+        smooth="easeInOutCubic"
+        spy={true}
+        duration={1000}
+        offset={-NAVBAR_HEIGHT_NUMBER}
+      >
+        <img src={logo} alt="Logo" />
+        <h1>Gloo</h1>
+      </Logo>
       <Hamburger onClick={toggleMenu}>☰</Hamburger>
       <NavLinks $isOpen={isOpen}>
         <NavItem
-          to="header"
+          to="prototype"
           smooth="easeInOutCubic"
           spy={true}
           duration={1000}
           activeClass="active"
-          offset={-60}
+          offset={-NAVBAR_HEIGHT_NUMBER}
         >
-          Home
+          Prototype
         </NavItem>
         <NavItem
           to="process"
@@ -106,7 +137,7 @@ const Navbar = () => {
           spy={true}
           duration={1000}
           activeClass="active"
-          offset={-60}
+          offset={-NAVBAR_HEIGHT_NUMBER}
         >
           Process
         </NavItem>
@@ -116,7 +147,7 @@ const Navbar = () => {
           spy={true}
           duration={1000}
           activeClass="active"
-          offset={-60}
+          // offset={-NAVBAR_HEIGHT_NUMBER}
         >
           Team
         </NavItem>

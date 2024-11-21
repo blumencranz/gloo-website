@@ -1,47 +1,52 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import headerImage from "../assets/duck.png";
+import { Link as ScrollLink } from "react-scroll";
+import headerImage from "../assets/Logo.png";
+import { theme } from "../styles/theme";
+import figmaLogo from "../assets/figmaLogo.png";
 
 // Styled Components
+const HeaderParent = styled.div`
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @media (max-width: 1345px) {
+    height: 40vh;
+  }
+`;
+
 const HeaderContainer = styled.header`
   width: 100%;
-  height: 500px; /* Set a specific height for the header */
+  height: calc(100vh - 50px); /* Assuming navbar height is 50px */
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: red; */
   gap: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+  position: relative; /* Ensure positioning context for ScrollDownText */
   z-index: 999;
 
   @media (max-width: 1345px) {
     flex-direction: column;
-    height: auto; /* Adjust height for column layout */
   }
 `;
 
 const ImageContainer = styled.div`
-  /* background-color: aliceblue; */
   justify-content: center;
   align-items: center;
   display: flex;
   flex: 2;
   width: 100%; /* Ensure it takes full width in column layout */
   @media (max-width: 1345px) {
-    height: 300px; /* Set a fixed height for column layout */
+    display: none;
   }
 `;
 
 const HeaderImage = styled.img`
-  max-height: 500px; /* Ensure the image does not exceed the container height */
-  width: 100%; /* Ensure the image takes full width */
-  object-fit: contain; /* Ensure the image covers the container */
-
-  @media (max-width: 1345px) {
-    max-height: 300px; /* Set a fixed height for column layout */
-  }
+  width: 75%; /* Ensure the image takes 75% of the height */
 `;
 
 const TitleContainer = styled.div`
@@ -50,20 +55,94 @@ const TitleContainer = styled.div`
   align-items: center;
   text-align: center;
   flex: 2;
-  /* width: 100%; */
+`;
+
+const ScrollDownText = styled(ScrollLink)`
+  position: absolute;
+  bottom: 20px; /* Position it 20px from the bottom */
+  font-size: 1.2rem;
+  color: ${theme.colors.text};
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: none; /* Hide the text on small screens */
+  }
+`;
+
+const LinkButtons = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 10px;
+  padding: 20px 0;
+  width: 100%;
+  background-color: ${theme.colors.primary};
+  /* box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); */
+`;
+
+const LinkButton = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  border-radius: 25px;
+  width: 150px;
+  background-color: ${theme.colors.button.normal};
+  color: ${theme.colors.text};
+  text-decoration: none;
+  font-size: 20px;
+  height: 50px;
+  gap: 10px;
+  pointer-events: ${(props) => (props.disabled ? "none" : "auto")};
+  opacity: ${(props) => (props.disabled ? 0.6 : 1)};
+  &:hover {
+    background-color: ${(props) =>
+      props.disabled
+        ? theme.colors.button.disabled
+        : theme.colors.button.hover};
+  }
+`;
+
+const ButtonLogo = styled.img`
+  height: 50%;
 `;
 
 const Header = () => {
   return (
-    <HeaderContainer>
-      <TitleContainer>
-        <h1>Hello, Gloo!</h1>
-        <p>Making student-teacher connections that stick!</p>
-      </TitleContainer>
-      <ImageContainer>
-        <HeaderImage src={headerImage} />
-      </ImageContainer>
-    </HeaderContainer>
+    <HeaderParent>
+      <HeaderContainer>
+        <TitleContainer>
+          <h1>Hello, Gloo!</h1>
+          <p>Making student-teacher connections that stick!</p>
+          <LinkButtons>
+            <LinkButton
+              href="https://www.figma.com/proto/fOpsMCTOCVcIZfkPUBPBQ9/Gloo?node-id=126-1627&node-type=canvas&t=EDP5xbU43GWxPGes-0&scaling=scale-down&content-scaling=fixed&page-id=126%3A1626&starting-point-node-id=126%3A1627"
+              target="_blank"
+              disabled={true}
+            >
+              <ButtonLogo src={figmaLogo} alt="Figma Logo" />
+              Prototype
+            </LinkButton>
+            <LinkButton href="" target="_blank" disabled={true}>
+              README
+            </LinkButton>
+          </LinkButtons>
+        </TitleContainer>
+        <ImageContainer>
+          <HeaderImage src={headerImage} alt="Header Image" />
+        </ImageContainer>
+        <ScrollDownText
+          to="prototype"
+          smooth={true}
+          duration={1000}
+          offset={-50}
+        >
+          Scroll Down ⇣
+        </ScrollDownText>
+      </HeaderContainer>
+    </HeaderParent>
   );
 };
 

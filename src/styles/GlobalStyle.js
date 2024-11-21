@@ -87,17 +87,17 @@ const GlobalStyle = createGlobalStyle`
       font-size: 14px;
     }
     
-    h1 {
+    /* h1 {
       font-size: 2rem;
-    }
+    } */
     
     button {
       padding: ${(props) => props.theme.spacing.small};
     }
 
-    p {
+    /* p {
       font-size: 0.875rem; /* Adjust the font size of <p> elements for smaller screens */
-    }
+    } */
   }
 `;
 

@@ -17,7 +17,7 @@ export const theme = {
     body: "Itim, sans-serif",
   },
   constants: {
-    navbarHeight: "60px",
+    navbarHeight: "50px",
   },
   spacing: {
     small: "8px",

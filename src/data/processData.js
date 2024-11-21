@@ -4,6 +4,9 @@ import ConceptVideo from "../pages/home/process/content/ConceptVideo";
 import LowFiPrototype from "../pages/home/process/content/LowFiPrototype";
 import MedFiPrototype from "../pages/home/process/content/MedFiPrototype";
 import Needfinding from "../pages/home/process/content/Needfinding";
+import HiFiPrototype from "../pages/home/process/content/HiFiPrototype";
+import PosterPitchDemo from "../pages/home/process/content/PosterPitchDemo";
+import FinalReport from "../pages/home/process/content/FinalReport";
 
 // src/data/processData.js
 const processData = {
@@ -53,6 +56,7 @@ const processData = {
     splash: "Build a high-fidelity prototype.",
     icon: "🖌️",
     disabled: true,
+    component: HiFiPrototype,
   },
   "heuristic-evaluation": {
     id: "heuristic-evaluation",
@@ -68,6 +72,7 @@ const processData = {
     splash: "Present your project with a poster and demo.",
     icon: "🖼️",
     disabled: true,
+    component: PosterPitchDemo,
   },
   "final-report": {
     id: "final-report",
@@ -75,6 +80,7 @@ const processData = {
     splash: "Compile your work into a final report.",
     icon: "📄",
     disabled: true,
+    component: FinalReport,
   },
 };
 

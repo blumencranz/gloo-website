@@ -11,6 +11,7 @@ const TeamContainer = styled.div`
   align-items: center;
   width: 75%;
   padding: 20px;
+  /* background-color: blue; */
 
   @media (max-width: 768px) {
     width: 90%;
