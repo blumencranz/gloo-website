@@ -22,7 +22,7 @@ const title = `
 `;
 
 const description = `
-  Our second assignment to refine the Needfinding Process
+  Our second assignment to refine the Needfinding Process and test our assumptions
 `;
 
 const AdditionalNeedfinding = () => {
@@ -49,6 +49,7 @@ const AdditionalNeedfinding = () => {
         height="480"
         allow="autoplay"
         style={{ border: "none" }}
+        sandbox="allow-scripts allow-same-origin allow-popups"
       ></iframe>
     </SplitView>
   );

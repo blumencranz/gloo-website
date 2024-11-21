@@ -58,6 +58,7 @@ const MedFiPrototype = () => {
         height="480"
         allow="autoplay"
         style={{ border: "none" }}
+        sandbox="allow-scripts allow-same-origin allow-popups"
       ></iframe>
     </SplitView>
   );

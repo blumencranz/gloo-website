@@ -7,6 +7,7 @@ import { Element } from "react-scroll";
 import Navbar from "../../components/Navbar";
 import Team from "./team/Team";
 import Prototype from "./prototype/Prototype";
+import About from "./about/About";
 import { theme } from "../../styles/theme";
 
 const sectionStyles = {
@@ -23,6 +24,7 @@ const sectionStyles = {
       height: 45vh;
     }
   `,
+  about: css``,
   process: css``,
   team: css`
     min-height: 100vh;
@@ -46,6 +48,9 @@ const Home = () => {
     <>
       <Section name="header" sectionType="header">
         <Header />
+      </Section>
+      <Section name="about" sectionType="about">
+        <About />
       </Section>
       <Section name="prototype" sectionType="prototype">
         <Prototype />

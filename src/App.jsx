@@ -8,6 +8,14 @@ import GlobalStyle from "./styles/GlobalStyle";
 import Navbar from "./components/Navbar";
 
 const App = () => {
+  const originalWarn = console.warn;
+
+  console.warn = function (message, ...args) {
+    if (!message.includes("third-party cookies")) {
+      originalWarn(message, ...args);
+    }
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />

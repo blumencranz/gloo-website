@@ -22,7 +22,7 @@ const title = `
 `;
 
 const description = `
-  Our third assignment to experiment with prototypings
+  Our paper prototype, quick and dirty for rapid user testing
 `;
 
 const LofiPrototype = () => {
@@ -49,6 +49,7 @@ const LofiPrototype = () => {
         height="480"
         allow="autoplay"
         style={{ border: "none" }}
+        sandbox="allow-scripts allow-same-origin allow-popups"
       ></iframe>
     </SplitView>
   );

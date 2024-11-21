@@ -18,7 +18,7 @@ const title = `
 `;
 
 const description = `
-  Our heuristic evaluation
+  Design feedback and recommendations from other CS 147 students
 `;
 
 const HeuristicEvaluation = () => {
@@ -52,6 +52,7 @@ const HeuristicEvaluation = () => {
         height="480"
         allow="autoplay"
         style={{ border: "none" }}
+        sandbox="allow-scripts allow-same-origin allow-popups"
       ></iframe>
     </SplitView>
   );

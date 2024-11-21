@@ -122,6 +122,16 @@ const Navbar = () => {
       <Hamburger onClick={toggleMenu}>☰</Hamburger>
       <NavLinks $isOpen={isOpen}>
         <NavItem
+          to="about"
+          smooth="easeInOutCubic"
+          spy={true}
+          duration={1000}
+          activeClass="active"
+          offset={-NAVBAR_HEIGHT_NUMBER}
+        >
+          About
+        </NavItem>
+        <NavItem
           to="prototype"
           smooth="easeInOutCubic"
           spy={true}
@@ -129,7 +139,7 @@ const Navbar = () => {
           activeClass="active"
           offset={-NAVBAR_HEIGHT_NUMBER}
         >
-          Prototype
+          Concept
         </NavItem>
         <NavItem
           to="process"

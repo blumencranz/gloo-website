@@ -1,5 +1,18 @@
 import styled from "styled-components";
 import { theme } from "../../../styles/theme";
+import { Link as ScrollLink } from "react-scroll";
+
+const ScrollDownText = styled(ScrollLink)`
+  /* position: absolute; */
+  /* bottom: 20px; */
+  font-size: 1.2rem;
+  color: ${theme.colors.text};
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: none; /* Hide the text on small screens */
+  }
+`;
 
 const Container = styled.div`
   display: flex;
@@ -36,7 +49,11 @@ export default function Prototype() {
         <ResponsiveIframe
           src="https://www.youtube.com/embed/dpXmXKQ6bqY"
           allow="autoplay; fullscreen"
+          sandbox="allow-scripts allow-same-origin allow-popups"
         ></ResponsiveIframe>
+        {/* <ScrollDownText to="process" smooth={true} duration={1000} offset={-50}>
+          Scroll Down ⇣
+        </ScrollDownText> */}
       </Container>
     </>
   );

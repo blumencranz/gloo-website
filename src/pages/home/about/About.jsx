@@ -1,16 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import { Link as ScrollLink } from "react-scroll";
-import headerImage from "../assets/Logo.png";
-import { theme } from "../styles/theme";
-import figmaLogo from "../assets/figmaLogo.png";
+import headerImage from "../../../assets/Logo.png";
+import { theme } from "../../../styles/theme";
+import figmaLogo from "../../../assets/figmaLogo.png";
 
 // Styled Components
 const HeaderParent = styled.div`
   /* height: calc(100vh - 50px); */
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
@@ -23,10 +22,8 @@ const HeaderContainer = styled.header`
   align-items: center;
   justify-content: center;
   gap: 30px;
-  /* position: relative; */
+  position: relative; /* Ensure positioning context for ScrollDownText */
   z-index: 999;
-
-  /* background-color: red; */
 
   @media (max-width: 1345px) {
     flex-direction: column;
@@ -53,16 +50,14 @@ const HeaderImage = styled.img`
 const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
   flex: 2;
   padding: 0 10vw;
-
-  @media (max-width: 1345px) {
-    flex: 0;
-  }
   @media (max-width: 768px) {
     padding: 0;
+    flex: auto;
   }
 `;
 
@@ -107,8 +102,8 @@ const ButtonLogo = styled.img`
 `;
 
 const ScrollDownText = styled(ScrollLink)`
-  position: absolute;
-  bottom: 20px;
+  /* position: absolute; */
+  /* bottom: 60px; */
   padding-bottom: 10px;
   font-size: 1.2rem;
   color: ${theme.colors.text};
@@ -120,36 +115,27 @@ const ScrollDownText = styled(ScrollLink)`
   }
 `;
 
-const Header = () => {
+const description = `
+  We built Gloo to help foster deeper connections between high schools students and their teachers. With Gloo, teachers share their interests and availability, and students get recommended teachers we think they'll enjoy getting to know better. Whether its advice or a letter of recommendation, teachers have so much to offer their students. With Gloo, making those connections has never been easier! 
+`;
+
+const About = () => {
   return (
     <HeaderParent>
       <HeaderContainer>
-        <TitleContainer>
-          <h1>Hello, Gloo!</h1>
-          <p>Making student-teacher connections that stick!</p>
-          <LinkButtons>
-            <LinkButton
-              href="https://www.figma.com/proto/fOpsMCTOCVcIZfkPUBPBQ9/Gloo?node-id=126-1627&node-type=canvas&t=EDP5xbU43GWxPGes-0&scaling=scale-down&content-scaling=fixed&page-id=126%3A1626&starting-point-node-id=126%3A1627"
-              target="_blank"
-              disabled={true}
-            >
-              <ButtonLogo src={figmaLogo} alt="Figma Logo" />
-              Prototype
-            </LinkButton>
-            <LinkButton href="" target="_blank" disabled={true}>
-              README
-            </LinkButton>
-          </LinkButtons>
-        </TitleContainer>
         <ImageContainer>
           <HeaderImage src={headerImage} alt="Header Image" />
         </ImageContainer>
-        <ScrollDownText to="about" smooth={true} duration={1000} offset={-50}>
-          Scroll Down ⇣
-        </ScrollDownText>
+        <TitleContainer>
+          <h2>What is Gloo?</h2>
+          <p>{description}</p>
+        </TitleContainer>
       </HeaderContainer>
+      {/* <ScrollDownText to="prototype" smooth={true} duration={1000} offset={-50}>
+        Scroll Down ⇣
+      </ScrollDownText> */}
     </HeaderParent>
   );
 };
 
-export default Header;
+export default About;

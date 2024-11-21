@@ -57,12 +57,22 @@ const Image = styled.img`
 `;
 
 const Name = styled.div`
+  margin-bottom: 0;
   margin-top: 10px;
   font-size: 0.9em;
   font-weight: bold;
-
   @media (max-width: 768px) {
     font-size: 1em;
+  }
+`;
+
+const Role = styled.div`
+  margin-top: 0;
+  font-size: 0.7em;
+  color: gray;
+
+  @media (max-width: 768px) {
+    font-size: 0.8em;
   }
 `;
 
@@ -74,18 +84,22 @@ const Team = () => {
         <ProfileCard>
           <Image src={justin} alt="Justin B." />
           <Name>Justin B.</Name>
+          <Role>Web/App</Role>
         </ProfileCard>
         <ProfileCard>
           <Image src={alison} alt="Alison R." />
           <Name>Alison R.</Name>
+          <Role>App</Role>
         </ProfileCard>
         <ProfileCard>
           <Image src={matthew} alt="Matthew M." />
           <Name>Matthew M.</Name>
+          <Role>App/Design</Role>
         </ProfileCard>
         <ProfileCard>
           <Image src={monica} alt="Monica H." />
           <Name>Monica H.</Name>
+          <Role>Design</Role>
         </ProfileCard>
       </ProfileContainer>
     </TeamContainer>

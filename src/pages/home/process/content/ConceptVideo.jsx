@@ -70,6 +70,7 @@ const ConceptVideo = () => {
           height="450"
           allow="autoplay"
           style={{ border: "none" }}
+          sandbox="allow-scripts allow-same-origin allow-popups"
         ></iframe>
         <iframe
           src="https://drive.google.com/file/d/10Y6gd9Txwm0Hv5C3esRebUWQqNAzE_aX/preview"
@@ -77,6 +78,7 @@ const ConceptVideo = () => {
           height="450"
           allow="autoplay"
           style={{ border: "none" }}
+          sandbox="allow-scripts allow-same-origin allow-popups"
         ></iframe>
       </ResponsiveDiv>
     </SplitView>
