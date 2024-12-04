@@ -49,7 +49,7 @@ export default function Prototype() {
         <ResponsiveIframe
           src="https://www.youtube.com/embed/dpXmXKQ6bqY"
           allow="autoplay; fullscreen"
-          sandbox="allow-scripts allow-same-origin allow-popups"
+          // sandbox="allow-scripts allow-same-origin allow-popups"
         ></ResponsiveIframe>
         {/* <ScrollDownText to="process" smooth={true} duration={1000} offset={-50}>
           Scroll Down ⇣

@@ -10,7 +10,7 @@ import {
   ChildDiv,
   Title,
 } from "../../../../styles/StyledComponents";
-import driveLogo from "../../../../assets/driveLogo.png";
+import driveLogo from "../../../../assets/driveLogo.svg";
 import excelLogo from "../../../../assets/excelLogo.png";
 
 const title = `
@@ -18,7 +18,7 @@ const title = `
 `;
 
 const description = `
-  Design feedback and recommendations from other CS 147 students
+  Design feedback and recommendations from other CS 147 students.
 `;
 
 const HeuristicEvaluation = () => {
@@ -31,29 +31,29 @@ const HeuristicEvaluation = () => {
         </ChildDiv>
         <LinkButtons>
           <LinkButton
-            href="https://drive.google.com/file/d/1u4WcSIkKfvLzF3sJz-vQQD5z9gTTfEB2/view?usp=sharing"
+            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/HeuristicEvaluation/heuristicEvaluation.pdf"
             target="_blank"
           >
-            <ButtonLogo src={driveLogo} alt="Google Drive Logo" />
-            Sheet
+            {/* <ButtonLogo src={driveLogo} alt="Google Drive Logo" /> */}
+            Sheet (pdf)
           </LinkButton>
           <LinkButton
-            href="https://drive.google.com/uc?export=download&id=1LAwUdg_5H7J2yItQoyvutY5oU0AnhzSd"
+            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/HeuristicEvaluation/heuristicEvaluation.xlsx"
             target="_blank"
           >
             <ButtonLogo src={excelLogo} alt="Excel Logo" />
-            XLSX
+            Sheet (xlsx)
           </LinkButton>
         </LinkButtons>
       </ParentDiv>
-      <iframe
+      {/* <iframe
         src="https://drive.google.com/file/d/1u4WcSIkKfvLzF3sJz-vQQD5z9gTTfEB2/preview"
         width="100%"
         height="480"
         allow="autoplay"
         style={{ border: "none" }}
         sandbox="allow-scripts allow-same-origin allow-popups"
-      ></iframe>
+      ></iframe> */}
     </SplitView>
   );
 };

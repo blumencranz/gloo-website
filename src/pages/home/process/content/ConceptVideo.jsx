@@ -10,7 +10,7 @@ import {
   ChildDiv,
   ParentDiv,
 } from "../../../../styles/StyledComponents";
-import driveLogo from "../../../../assets/driveLogo.png";
+import driveLogo from "../../../../assets/driveLogo.svg";
 import youtubeLogo from "../../../../assets/youtubeLogo.png";
 
 const ResponsiveDiv = styled.div`
@@ -29,7 +29,7 @@ const title = `
 `;
 
 const description = `
-  Our concept video to show users what it feels like to use our app
+  Our concept video to show users what it feels like to use our app.
 `;
 
 const ConceptVideo = () => {
@@ -42,15 +42,24 @@ const ConceptVideo = () => {
         </ChildDiv>
         <LinkButtons>
           <LinkButton
-            href="https://drive.google.com/file/d/10Y6gd9Txwm0Hv5C3esRebUWQqNAzE_aX/view?usp=sharing"
+            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/ConceptVideo/conceptVideo.pdf"
             target="_blank"
           >
-            <ButtonLogo src={driveLogo} alt="Google Drive Logo" />
-            Slides
+            {/* <ButtonLogo src={driveLogo} alt="Google Drive Logo" /> */}
+            Slides (pdf)
           </LinkButton>
           <LinkButton
-            href="https://drive.google.com/uc?export=download&id=1AcpTAd_AYcWXjV4BF6DsO-puU4g2sN4C"
+            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/ConceptVideo/conceptVideo.pptx"
             target="_blank"
+          >
+            {/* <ButtonLogo src={driveLogo} alt="Google Drive Logo" /> */}
+            PPTX
+          </LinkButton>
+          <LinkButton
+            // href="https://drive.google.com/uc?export=download&id=1AcpTAd_AYcWXjV4BF6DsO-puU4g2sN4C"
+            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/ConceptVideo/conceptVideo.mp4"
+            target="_blank"
+            download
           >
             Download Video
           </LinkButton>
@@ -72,14 +81,14 @@ const ConceptVideo = () => {
           style={{ border: "none" }}
           sandbox="allow-scripts allow-same-origin allow-popups"
         ></iframe>
-        <iframe
+        {/* <iframe
           src="https://drive.google.com/file/d/10Y6gd9Txwm0Hv5C3esRebUWQqNAzE_aX/preview"
           width="100%"
           height="450"
           allow="autoplay"
           style={{ border: "none" }}
           sandbox="allow-scripts allow-same-origin allow-popups"
-        ></iframe>
+        ></iframe> */}
       </ResponsiveDiv>
     </SplitView>
   );

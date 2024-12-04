@@ -39,6 +39,8 @@ export const LinkButton = styled.a`
   &:hover {
     background-color: ${theme.colors.button.hover};
   }
+  pointer-events: ${(props) => (props.disabled ? "none" : "auto")};
+  opacity: ${(props) => (props.disabled ? 0.6 : 1)};
 
   /* @media (max-width: 1100px) {
     font-size: 13px;
@@ -57,6 +59,7 @@ export const Title = styled.h3`
   margin-bottom: 5px;
   flex-shrink: 1;
   word-wrap: break-word;
+  padding-top: 10px;
 `;
 
 export const ParentDiv = styled.div`

@@ -55,7 +55,7 @@ const processData = {
     title: "Hi-Fi Prototype",
     splash: "Build a high-fidelity prototype.",
     icon: "🖌️",
-    disabled: true,
+    disabled: false,
     component: HiFiPrototype,
   },
   "heuristic-evaluation": {
@@ -71,7 +71,7 @@ const processData = {
     title: "Poster Pitch Demo",
     splash: "Present your project with a poster and demo.",
     icon: "🖼️",
-    disabled: true,
+    disabled: false,
     component: PosterPitchDemo,
   },
   "final-report": {
@@ -79,7 +79,7 @@ const processData = {
     title: "Final Report",
     splash: "Compile your work into a final report.",
     icon: "📄",
-    disabled: true,
+    disabled: false,
     component: FinalReport,
   },
 };

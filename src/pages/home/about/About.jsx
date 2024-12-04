@@ -116,7 +116,7 @@ const ScrollDownText = styled(ScrollLink)`
 `;
 
 const description = `
-  We built Gloo to help foster deeper connections between high schools students and their teachers. With Gloo, teachers share their interests and availability, and students get recommended teachers we think they'll enjoy getting to know better. Whether its advice or a letter of recommendation, teachers have so much to offer their students. With Gloo, making those connections has never been easier! 
+  We built Gloo to help foster deeper connections between high school students and their teachers. With Gloo, teachers share their interests and availability, and students get recommended teachers we think they'll enjoy getting to know better. Whether its advice or a letter of recommendation, teachers have so much to offer their students. With Gloo, making those connections has never been easier! 
 `;
 
 const About = () => {
