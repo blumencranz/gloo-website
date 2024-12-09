@@ -43,62 +43,55 @@ const PosterPitchDemo = () => {
         <LinkButtons>
           <LinkButton
             // href="https://drive.google.com/file/d/1vNN0htBDS7cg40f1lM9bA1Atqapl7emg/view?usp=sharing"
-            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/HiFiPrototype/hiFiPrototype.pdf"
+            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/PosterPitchDemo/pitch.pdf"
             target="_blank"
-            disabled={true}
           >
             {/* <ButtonLogo src={driveLogo} alt="Google Drive Logo" /> */}
             Pitch (pdf)
           </LinkButton>
           <LinkButton
             // href="https://drive.google.com/file/d/1vNN0htBDS7cg40f1lM9bA1Atqapl7emg/view?usp=sharing"
-            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/HiFiPrototype/hiFiPrototype.pptx"
+            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/PosterPitchDemo/pitch.pptx"
             target="_blank"
-            disabled={true}
           >
             {/* <ButtonLogo src={driveLogo} alt="Google Drive Logo" /> */}
             Pitch (pptx)
           </LinkButton>
           <LinkButton
             // href="https://drive.google.com/file/d/1vNN0htBDS7cg40f1lM9bA1Atqapl7emg/view?usp=sharing"
-            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/HiFiPrototype/hiFiPrototype.pdf"
+            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/PosterPitchDemo/script.pdf"
             target="_blank"
-            disabled={true}
           >
             {/* <ButtonLogo src={driveLogo} alt="Google Drive Logo" /> */}
             Script (pdf)
           </LinkButton>
           <LinkButton
             // href="https://drive.google.com/file/d/1vNN0htBDS7cg40f1lM9bA1Atqapl7emg/view?usp=sharing"
-            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/HiFiPrototype/hiFiPrototype.pdf"
+            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/PosterPitchDemo/poster.pptx"
             target="_blank"
-            disabled={true}
           >
             {/* <ButtonLogo src={driveLogo} alt="Google Drive Logo" /> */}
             Poster (source)
           </LinkButton>
           <LinkButton
             // href="https://drive.google.com/file/d/1vNN0htBDS7cg40f1lM9bA1Atqapl7emg/view?usp=sharing"
-            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/HiFiPrototype/hiFiPrototype.pdf"
+            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/PosterPitchDemo/poster.pdf"
             target="_blank"
-            disabled={true}
           >
             {/* <ButtonLogo src={driveLogo} alt="Google Drive Logo" /> */}
             Poster (pdf)
           </LinkButton>
           <LinkButton
-            href="https://www.youtube.com/watch?v=dpXmXKQ6bqY"
+            href="https://www.youtube.com/watch?v=FFH4fFmhyvw"
             target="_blank"
-            disabled
           >
             <ButtonLogo src={youtubeLogo} alt="YouTube Logo" />
             YouTube
           </LinkButton>
           <LinkButton
             // href="https://drive.google.com/uc?export=download&id=1AcpTAd_AYcWXjV4BF6DsO-puU4g2sN4C"
-            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/ConceptVideo/conceptVideo.mp4"
+            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/PosterPitchDemo/demo.mp4"
             target="_blank"
-            disabled
             download
           >
             Download Video
@@ -106,13 +99,23 @@ const PosterPitchDemo = () => {
         </LinkButtons>
       </ParentDiv>
       <ResponsiveDiv>
-        <iframe
-          // src="https://www.youtube.com/embed/dpXmXKQ6bqY"
+        {/* <iframe
+          src="https://www.youtube.com/embed/dpXmXKQ6bqY"
           width="100%"
           height="450"
           allow="autoplay"
           style={{ border: "none" }}
-          // sandbox="allow-scripts allow-same-origin allow-popups"
+          sandbox="allow-scripts allow-same-origin allow-popups"
+        ></iframe> */}
+        <iframe
+          width="100%"
+          height="450"
+          style={{ border: "none" }}
+          src="https://www.youtube.com/embed/FFH4fFmhyvw?si=kWmvqRliVOJeUdgh"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
         ></iframe>
         {/* <iframe
           // src="https://drive.google.com/file/d/10Y6gd9Txwm0Hv5C3esRebUWQqNAzE_aX/preview"

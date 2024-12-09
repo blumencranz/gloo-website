@@ -31,18 +31,16 @@ const FinalReport = () => {
         <LinkButtons>
           <LinkButton
             // href="https://drive.google.com/file/d/1vGSzx_KheO5sCllmSOReZ0D_ZrVfBwe-/view?usp=sharing"
-            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/Needfinding/needfinding.pdf"
+            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/FinalReport/report.docx"
             target="_blank"
-            disabled
           >
             {/* <ButtonLogo src={driveLogo} alt="Google Drive Logo" /> */}
-            Report (doc)
+            Report (docx)
           </LinkButton>
           <LinkButton
             // href="https://drive.google.com/file/d/1vGSzx_KheO5sCllmSOReZ0D_ZrVfBwe-/view?usp=sharing"
-            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/Needfinding/needfinding.pptx"
+            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/FinalReport/report.pdf"
             target="_blank"
-            disabled
           >
             {/* <ButtonLogo src={driveLogo} alt="Google Drive Logo" /> */}
             Report (pdf)

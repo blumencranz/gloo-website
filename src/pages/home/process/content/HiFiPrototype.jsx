@@ -32,34 +32,30 @@ const HiFiPrototype = () => {
         <LinkButtons>
           <LinkButton
             // href="https://drive.google.com/file/d/1vNN0htBDS7cg40f1lM9bA1Atqapl7emg/view?usp=sharing"
-            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/HiFiPrototype/hiFiPrototype.pdf"
+            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/HiFiPrototype/slides.pdf"
             target="_blank"
-            disabled={true}
           >
             {/* <ButtonLogo src={driveLogo} alt="Google Drive Logo" /> */}
             Slides (pdf)
           </LinkButton>
           <LinkButton
             // href="https://drive.google.com/file/d/1vNN0htBDS7cg40f1lM9bA1Atqapl7emg/view?usp=sharing"
-            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/HiFiPrototype/hiFiPrototype.pptx"
+            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/HiFiPrototype/slides.pptx"
             target="_blank"
-            disabled={true}
           >
             {/* <ButtonLogo src={driveLogo} alt="Google Drive Logo" /> */}
             Slides (pptx)
           </LinkButton>
           <LinkButton
-            href="https://www.figma.com/proto/fOpsMCTOCVcIZfkPUBPBQ9/Gloo?node-id=126-1627&node-type=canvas&t=EDP5xbU43GWxPGes-0&scaling=scale-down&content-scaling=fixed&page-id=126%3A1626&starting-point-node-id=126%3A1627"
+            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/HiFiPrototype/qr.png"
             target="_blank"
-            disabled={true}
           >
             {/* <ButtonLogo src={figmaLogo} alt="Figma Logo" /> */}
             Prototype
           </LinkButton>
           <LinkButton
-            href="https://drive.google.com/file/d/1zewc7rZY_l9Cruz7ZP_GO9JLUxsYNGqE/view?usp=sharing"
+            href="/class/cs147/projects/AI-in-Classroom/Gloo/content/HiFiPrototype/README.pdf"
             target="_blank"
-            disabled={true}
           >
             README
           </LinkButton>

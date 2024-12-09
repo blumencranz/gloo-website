@@ -129,14 +129,16 @@ const Header = () => {
           <p>Making student-teacher connections that stick!</p>
           <LinkButtons>
             <LinkButton
-              href="https://www.figma.com/proto/fOpsMCTOCVcIZfkPUBPBQ9/Gloo?node-id=126-1627&node-type=canvas&t=EDP5xbU43GWxPGes-0&scaling=scale-down&content-scaling=fixed&page-id=126%3A1626&starting-point-node-id=126%3A1627"
+              href="/class/cs147/projects/AI-in-Classroom/Gloo/content/HiFiPrototype/qr.png"
               target="_blank"
-              disabled={true}
             >
-              <ButtonLogo src={figmaLogo} alt="Figma Logo" />
+              {/* <ButtonLogo src={figmaLogo} alt="Figma Logo" /> */}
               Prototype
             </LinkButton>
-            <LinkButton href="" target="_blank" disabled={true}>
+            <LinkButton
+              href="/class/cs147/projects/AI-in-Classroom/Gloo/content/HiFiPrototype/README.pdf"
+              target="_blank"
+            >
               README
             </LinkButton>
           </LinkButtons>

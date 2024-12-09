@@ -84,12 +84,12 @@ const Team = () => {
         <ProfileCard>
           <Image src={justin} alt="Justin B." />
           <Name>Justin B.</Name>
-          <Role>Web/App</Role>
+          <Role>Web/App/Design</Role>
         </ProfileCard>
         <ProfileCard>
           <Image src={alison} alt="Alison R." />
           <Name>Alison R.</Name>
-          <Role>App</Role>
+          <Role>App/Design</Role>
         </ProfileCard>
         <ProfileCard>
           <Image src={matthew} alt="Matthew M." />
@@ -99,7 +99,7 @@ const Team = () => {
         <ProfileCard>
           <Image src={monica} alt="Monica H." />
           <Name>Monica H.</Name>
-          <Role>Design</Role>
+          <Role>App/Design</Role>
         </ProfileCard>
       </ProfileContainer>
     </TeamContainer>
